@@ -1,14 +1,9 @@
-def is_leap_year(year):
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        return True
+def factorial_recursive(n):
+    if n == 0:
+        return 1
     else:
-        return False
+        return n * factorial_recursive(n - 1)
 
-try:
-    year = int(input("Enter a year: "))
-    if is_leap_year(year):
-        print(f"{year} is a leap year.")
-    else:
-        print(f"{year} is not a leap year.")
-except ValueError:
-    print("Invalid input. Please enter a valid year (integer).")
+# Example usage:
+n = 5
+print(f"The factorial of {n} is {factorial_recursive(n)}")
